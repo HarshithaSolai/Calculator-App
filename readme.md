@@ -12,6 +12,7 @@ Functionality :
 
 
 
+# Second Assignment Enhancements
 calc.js file has the following updates :
 
 1. Calculator Class contains all the calculator properties and calculator methods.
