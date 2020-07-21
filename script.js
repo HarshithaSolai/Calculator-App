@@ -4,7 +4,7 @@ const calculator = {
   memoryValue           : 0,
   operator              : null,
   firstOperand          : null,
-  twoOperandsAvailable  : false,
+  twoOperandsAvailable  : false
 };
 
 //Displaying digits [0-9] based on first or second operand
@@ -71,6 +71,7 @@ function evaluate(firstOperand, secondOperand, operator) {
     return firstOperand / secondOperand;
   }
 
+
   return secondOperand;
 }
 
@@ -128,8 +129,10 @@ updateDisplay();
 
 //Event Listeners to Calculator's Button Clicks 
 const btns = document.querySelector('.buttons');
+
+//Event Delegation
 btns.addEventListener('click', (event) => {
-  const { target } = event;
+  const { target } = event; // Targetting the clicked button
 
   //When the click is not on button, exit the function.
   if (!target.matches('button')) {
@@ -170,6 +173,7 @@ btns.addEventListener('click', (event) => {
     updateDisplay();
     return;
   }
+
 
   //When clicked on digits
   inputDigit(target.value);
